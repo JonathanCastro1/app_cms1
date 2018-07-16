@@ -3,15 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\login_model;
 
-class login extends Controller
+
+// use \App\Article::all();
+
+class Usuarios extends Controller
 {
     public function index()
-    {    	
-    	return view('login');
-    	// no se puede cargar 2 vistas a la vez
-    	// return view('welcome');
+    {    
 
+    	// return view('admin/usuarios');
+        // $datoss = ['id=>1','nombre=>pedro'];
+        $datoss = Login_model::all();
+        return view('admin/usuarios',compact('datoss'));
+    	
     }
 
 
@@ -26,10 +32,10 @@ class login extends Controller
     // }
 
 
-    public function mostrar()
-    {    	
-    	echo "mostrando algo";
-    }
+    // public function mostrar()
+    // {    	
+    // 	echo "mostrando algo";
+    // }
 
     // public function footer()
     // {    	
