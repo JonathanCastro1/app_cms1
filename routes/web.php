@@ -17,6 +17,8 @@
 
 Route::get('/', 'login@index');
 
+Route::get('dashboard', 'usuarios@dashboard');
+
 // mostrar es la url al escribir en el navegador
 // y login es el controlador y mostrar es el metodo
 // Route::get('mostrar', 'login@mostrar');
@@ -26,15 +28,15 @@ Route::get('/', 'login@index');
 // Route::get('login', 'login@index');
 
 // ok, asi mostramos datos de una base de datos
-Route::get('/prueba', function () {
-     $results = DB::select('select * from usuarios ');
+// Route::get('/prueba', function () {
+//      $results = DB::select('select * from usuarios ');
 
-     foreach ($results as $mostrar) {
+//      foreach ($results as $mostrar) {
      	
-     	return $mostrar->nombre;
+//      	return $mostrar->nombre;
 
-     }
-});
+//      }
+// });
 
 
 // Route::get('prueba', 'login@pruebaModel');

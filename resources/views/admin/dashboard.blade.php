@@ -1,4 +1,11 @@
-  
+@extends('layouts/header')
+
+@section('title', 'dashboard')
+
+@include('admin/navbar')
+
+@include('admin/navigation')
+
   <div class="container">
 
                 <!-- Page Heading -->
@@ -155,3 +162,5 @@
 
 <br>
 <br>
+
+@include('layouts/footer')  

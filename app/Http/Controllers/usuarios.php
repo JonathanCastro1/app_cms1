@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+// con esto accedemos a todos los metodos,propiedades,etc, de la clase
+// osea lo esta importando
 use App\login_model;
 
 
@@ -12,13 +15,31 @@ class Usuarios extends Controller
 {
     public function index()
     {    
+    	
+        $datoss = login_model::all();
 
-    	// return view('admin/usuarios');
-        // $datoss = ['id=>1','nombre=>pedro'];
-        $datoss = Login_model::all();
+        // esta funcion es de laravel es como var_dump
+        // dd($datoss);
+
+        // el tipico var_dump
+        // var_dump($datoss);
+
+        // probando recibir data en el controlador
+        // foreach ($datoss as $dato) {
+        //     return $dato->nombre;
+        // }
+
+        // le paso la data a la vista,que recibo del modelo
         return view('admin/usuarios',compact('datoss'));
     	
     }
+
+    public function dashboard()
+    {         
+        return view('admin/dashboard');
+        
+    }
+
 
 
 

@@ -1,8 +1,15 @@
+@extends('layouts/header')
+
+@section('title', 'usuarios')
+
+@include('admin/navbar')
+
+@include('admin/navigation')  
 
 	<div class="row col-md-6 col-md-offset-1">
 
 		<div class="page-header">
-  			<h1>Admin Usuarios <small>Castro Tours</small></h1>
+  			<h1>Admin Usuarios <small>App cms</small></h1>
 		</div>
 
 		<div>
@@ -21,8 +28,7 @@
 												
 	                    <thead>
 	                        <tr>
-	                        	<th >#</th>
-	                        	<th >Imagen</th>
+	                        	<th >#</th>	                        	
 	                        	<th >Nombre</th>
 	                            <th >Apellido</th>	 
 	                            <th >Registrado</th>
@@ -43,7 +49,14 @@
 		<tr>
 		<td>{{$dato->id }}</td>		
 		<td>{{$dato->nombre }}</td>
-			
+		<td>{{$dato->apellido}}</td>
+		<td>{{$dato->fecha}}</td>
+		<td>{{$dato->email}}</td>
+		<td>{{$dato->estado}}</td>
+		<td>{{$dato->capital}}</td>
+		<td>{{$dato->parroquia}}</td>
+		<td>{{$dato->usuario}}</td>
+		<td>{{$dato->role}}</td>			
 		<td >
 		<!-- El id tiene que mostrarse en le tabla, si no no funcionan los metodos de ver,editar,eliminar -->
 		 <a  href="usuarios/ver/$dato->id" ><span class="btn-primary btn-xs glyphicon glyphicon-zoom-in" data-toggle="ver" title="Ver"></span></a>
@@ -68,3 +81,5 @@
 <br>
 
 </div>
+
+@include('layouts/footer')  
