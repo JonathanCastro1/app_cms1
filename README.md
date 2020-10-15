@@ -1,4 +1,3 @@
-#Author: Jonathan Castro<br>
 Versiones:<br>
 Laravel 5.6<br>
 Base de datos Mysql<br>
